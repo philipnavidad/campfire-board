@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://aframe.io/releases/0.3.0/aframe.min.js"></script>
+<script src="https://cdn.rawgit.com/AltspaceVR/AltspaceSDK/v2.4.2/dist/altspace.min.js"></script>
+</head>
+<body>
+<a-scene altspace="fullspace: true" sync-system="author: phil; app: campfire board">
+	<a-assets>
+		<a-asset-item id="sign-obj" src="files/sign.obj"></a-asset-item>
+    	<a-asset-item id="sign-mtl" src="files/sign.mtl"></a-asset-item>
+	</a-assets>
+	
+	<!-- Sign -->
+	<a-entity obj-model="obj: #sign-obj; mtl: #sign-mtl" position="0 -2 -0.5"></a-entity>
+
+</a-scene>
+</body>
+</html>
