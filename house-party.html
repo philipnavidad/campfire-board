@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://aframe.io/releases/0.3.0/aframe.min.js"></script>
+<script src="https://cdn.rawgit.com/AltspaceVR/AltspaceSDK/v2.4.2/dist/altspace.min.js"></script>
+<script src="files/navigate.js"></script>
+</head>
+<body>
+<a id="weblink" style="display: none;" href="https://account.altvr.com/events/717375679565398807"></a>
+<a-scene altspace="fullspace: true">
+	<a-assets>
+		<a-asset-item id="sign-obj" src="files/sign.obj"></a-asset-item>
+    		<a-asset-item id="sign-mtl" src="files/sign.mtl"></a-asset-item>
+		<img id="banner-bg" src="files/welcome.png">
+    		<img id="message" src="files/med-notification-billnye-comestoasvr.png">
+		<a-mixin id="sign-mix"
+			obj-model="obj: #sign-obj; mtl: #sign-mtl" 
+			position="-6 2.02 21" rotation="0 180 0"></a-mixin>
+    		<a-mixin id="banner-mix"
+			geometry="primitive: plane; width: 16; height: 9" 
+		 	scale="0.19 0.19 0.19" position="-6 2 20.905" rotation="0 180 0"
+			material="src: #banner-bg"
+			altspace-cursor-collider="enabled: true"></a-mixin>
+	</a-assets>
+	
+  	<!-- Sign -->
+	<a-entity mixin="sign-mix"></a-entity>
+	<a-entity mixin="banner-mix"></a-entity>
+</a-scene>
+</body>
+</html>
