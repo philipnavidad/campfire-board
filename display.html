@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://aframe.io/releases/0.3.0/aframe.min.js"></script>
+<script src="https://cdn.rawgit.com/AltspaceVR/AltspaceSDK/v2.4.2/dist/altspace.min.js"></script>
+<script src="files/navigate.js"></script>
+</head>
+<body>
+<a id="weblink" style="display: none;" href="https://account.altvr.com/events/717375679565398807"></a>
+<a-scene altspace="fullspace: true">
+	<a-assets>
+		<a-asset-item id="sign-obj" src="files/sign.obj"></a-asset-item>
+    <a-asset-item id="sign-mtl" src="files/sign.mtl"></a-asset-item>
+		<a-mixin id="sign-mix"
+			obj-model="obj: #sign-obj; mtl: #sign-mtl" 
+			position="0 -2 -10" rotation="0 200 0" scale="1 0.92 1"></a-mixin>
+	</a-assets>
+	
+  	<!-- Sign -->
+	<a-entity mixin="sign-mix"></a-entity>
+</a-scene>
+</body>
+</html>
