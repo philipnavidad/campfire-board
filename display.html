@@ -10,13 +10,12 @@
 <a-scene altspace="fullspace: true">
 	<a-assets>
 		<a-asset-item id="sign-obj" src="files/sign.obj"></a-asset-item>
-    <a-asset-item id="sign-mtl" src="files/sign.mtl"></a-asset-item>
+    		<a-asset-item id="sign-mtl" src="files/sign.mtl"></a-asset-item>
 		<a-mixin id="sign-mix"
 			obj-model="obj: #sign-obj; mtl: #sign-mtl" 
 			position="0 -2 -10" rotation="0 200 0" scale="1 0.92 1"></a-mixin>
 	</a-assets>
 	
-  	<!-- Sign -->
 	<a-entity mixin="sign-mix"></a-entity>
 </a-scene>
 </body>
